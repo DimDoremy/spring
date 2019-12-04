@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>生成结果</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--import bootstrap4-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css"/>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body data-spy="scroll" data-target=".container-fluid" data-offset="1" style="position: relative">
+
+<!--导航栏-->
+<nav class="navbar navbar-expand bg-dark navbar-dark">
+    <a class="navbar-brand" href="index.html"><img src="" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/index">主页</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/help">帮助</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<br/>
+<div class="border border-info rounded" style="max-width: 1200px;margin: 0 auto;">
+    <dl class="font-weight-bold test-justify">
+        <dt> 问题：</dt>
+        <dd th:text="${problem}"></dd>
+        <dt> 模板：</dt>
+        <dd th:text="${module}"></dd>
+    </dl>
+</div>
+
+<!--测试doing的link用-->
+<p th:text="${link}"></p>
+
+<br/>
+<!--附加导航样板-->
+<div class=" container-fluid">
+    <div class="row" style="max-width: 1200px;margin: 0 auto;">
+        <div class="col-sm-8 col-9">
+            <h2 id="1-page">第1条</h2>
+            <p>1</p>
+            <hr>
+            <h2 id="2-page">第2条</h2>
+            <p>1</p>
+            <hr>
+            <h2 id="3-page">第3条</h2>
+            <p>1</p>
+            <hr>
+            <h2 id="4-page">第4条</h2>
+            <p>1</p>
+            <hr>
+            <h2 id="5-page">第5条</h2>
+            <p>1</p>
+        </div>
+        <nav class="col-sm-4" id="myScrollspy">
+            <ul class="nav nav-pills nav-stacked flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#1-page" id="1-sql">条目1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#2-page" id="2-sql">条目2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#3-page" id="3-sql">条目3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#4-page" id="4-sql">条目4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#5-page" id="5-sql">条目5</a>
+                </li>
+            </ul>
+            <hr class="d-sm-none"/>
+        </nav>
+    </div>
+</div>
+
+</body>
+</html>

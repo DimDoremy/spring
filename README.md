@@ -18,8 +18,8 @@
 
 运行服务后输入`127.0.0.1:8899`打开首页
 
-![首页界面](C:\Users\DimDoremy\AppData\Roaming\Typora\typora-user-images\1575441444409.png)
+![首页界面](.\md\1575441444409.png)
 
 在这里提交表单后，通过问题和模板生成一系列SQL语句
 
-![生成结果界面](C:\Users\DimDoremy\AppData\Roaming\Typora\typora-user-images\1575441567606.png)
+![生成结果界面](.\md\1575441567606.png)

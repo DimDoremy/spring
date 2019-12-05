@@ -20,7 +20,7 @@ public class FormController {
         forms = new Forms(problem, module);
         map.addAttribute("problem", problem);
         map.addAttribute("module", module);
-        map.addAttribute("link", new doing(forms).link());
+        map.addAttribute("link", new Doing(forms).link());
         return "answer";
     }
 

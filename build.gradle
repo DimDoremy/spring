@@ -10,11 +10,13 @@ sourceCompatibility = '1.8'
 
 repositories {
     maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    flatDir(dir:'lib')
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation "org.springframework.boot:spring-boot-starter-thymeleaf"
+    implementation files('lib/mssql-jdbc-7.4.1.jre8.jar')
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }

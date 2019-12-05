@@ -1,13 +1,22 @@
 package com.spring.resource;
 
-public class doing {
+import com.spring.sqlserver.MainFunction;
+
+import java.util.Arrays;
+
+public class Doing {
     private Forms forms;
 
-    doing(Forms forms) {
+    Doing(Forms forms) {
         this.forms = forms;
     }
 
     public String link() {
-        return forms.getProblem() + forms.getModule();
+        MainFunction mf = new MainFunction();
+        mf.funSQLConnection("sa", "186536_wlj", "localhost:1433", "SQLconnection");
+        mf.funMain(forms.getProblem(), forms.getModule());
+        System.out.println(Arrays.toString(mf.answer_me_natural_word.toArray()));
+        System.out.println(Arrays.toString(mf.answer_me_SQL_word.toArray()));
+        return "";
     }
 }

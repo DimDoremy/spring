@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
     <title>帮助</title>
@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css"/>
     <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css"/>
+    <link rel="stylesheet" type="text/css" href="css/img.css"/>
 
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
@@ -33,5 +34,33 @@
     </div>
 </nav>
 
+<br/>
+<div class="container">
+    <h1>SQL代码块自动生成系统</h1>
+    <hr/>
+    <h2 class="lead">备注：当前本项目还没有实际完成</h2>
+    <hr/>
+    <h2>介绍</h2>
+    <br>
+    <p>该系统是一个通过 <em>Java + Spring boot + Gradle + thymeleaf + SQL Server</em>
+        架设的一个可以通过输入SQL语句和自然语言批量生成SQL语句用于人工智能训练模板的学期实训项目。</p>
+    <hr/>
+    <h2>下载和安装</h2>
+    <br>
+    <p>该系统是通过 <em> Intelij IDEA + Gradle </em> 进行的生成，所以安装方式通过IDEA编译运行即可启动后台服务。</p>
+    <p>下载该项目的方式可以通过直接<code> git clone </code>本项目的方式或者使用下面我们提供的链接</p>
+    <ul>
+        <li><a href='https://github.com/DimDoremy/spring.git'>下载链接</a></li>
+
+    </ul>
+    <hr/>
+    <h2>使用方式</h2>
+    <br>
+    <p>运行服务后输入<code> 127.0.0.1:8899 </code>打开首页</p>
+    <p class="justify-content-center"><img alt="1" src="image/1575441444409.png"/></p>
+    <p>在这里提交表单后，通过问题和模板生成一系列SQL语句</p>
+    <p class="justify-content-center"><img alt="2" src="image/1575441567606.png"/></p>
+</div>
 </body>
+
 </html>

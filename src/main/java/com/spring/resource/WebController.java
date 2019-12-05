@@ -10,7 +10,7 @@ import java.util.LinkedList;
 
 
 @Controller
-public class FormController {
+public class WebController {
     public Forms forms;
 
     @GetMapping(value = "/index")

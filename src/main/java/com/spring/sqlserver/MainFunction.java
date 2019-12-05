@@ -38,7 +38,7 @@ public class MainFunction {
             WL.cutIntoWords(SC.markedWords, strNaturalWords);
             if (ErrorReturn.err == 1) {
                 answer_me_natural_word.add("输入语句无法得到查询结果！");
-                answer_me_SQL_word.add("请输入匹配的查询语句！");
+                answer_me_SQL_word.add("输入SQL和输入自然语言不匹配！");
                 ErrorReturn.err--;
                 return;
             }
@@ -48,7 +48,7 @@ public class MainFunction {
             answer_me_SQL_word = WR.answer_me_SQL_word;
         } else {
             String err1 = "输入语句无法得到查询结果！";
-            String err2 = "请输入正确的查询语句！";
+            String err2 = "输入SQL语句不符合SQL语法！";
             answer_me_natural_word.add(err1);
             answer_me_SQL_word.add(err2);
             ErrorReturn.errorFailToSearchInDataBase();

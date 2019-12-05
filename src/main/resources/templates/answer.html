@@ -12,7 +12,7 @@
     <script src="js/bootstrap.bundle.js"></script>
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body data-spy="scroll" data-target=".container-fluid" data-offset="1" style="position: relative">
+<body>
 
 <!--导航栏-->
 <nav class="navbar navbar-expand bg-dark navbar-dark">
@@ -32,60 +32,36 @@
     </div>
 </nav>
 
-<br/>
-<div class="border border-info rounded" style="max-width: 1200px;margin: 0 auto;">
-    <dl class="font-weight-bold test-justify">
-        <dt> 问题：</dt>
-        <dd th:text="${problem}"></dd>
-        <dt> 模板：</dt>
-        <dd th:text="${module}"></dd>
-    </dl>
-</div>
+<div class="container">
+    <br/>
+    <table class="table">
+        <tr>
+            <th>自然语言问题：</th>
+            <th th:text="${problem}"></th>
+        </tr>
+        <tr>
+            <th>SQL语句模板：</th>
+            <th th:text="${module}"></th>
+        </tr>
+    </table>
 
-<!--测试doing的link用-->
-<p class="text-center" th:text="${link}"></p>
+    <br/>
 
-<br/>
-<!--附加导航样板-->
-<div class=" container-fluid">
-    <div class="row" style="max-width: 1200px;margin: 0 auto;">
-        <div class="col-sm-8 col-9">
-            <h2 id="1-page">第1条</h2>
-            <p>1</p>
-            <hr>
-            <h2 id="2-page">第2条</h2>
-            <p>1</p>
-            <hr>
-            <h2 id="3-page">第3条</h2>
-            <p>1</p>
-            <hr>
-            <h2 id="4-page">第4条</h2>
-            <p>1</p>
-            <hr>
-            <h2 id="5-page">第5条</h2>
-            <p>1</p>
-        </div>
-        <nav class="col-sm-4" id="myScrollspy">
-            <ul class="nav nav-pills nav-stacked flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" href="#1-page" id="1-sql">条目1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#2-page" id="2-sql">条目2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#3-page" id="3-sql">条目3</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#4-page" id="4-sql">条目4</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#5-page" id="5-sql">条目5</a>
-                </li>
-            </ul>
-            <hr class="d-sm-none"/>
-        </nav>
-    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>自然语言</th>
+            <th>SQL语句</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="answers:${answer_list}">
+            <td th:utext="${answers.get(0)}"></td>
+            <td th:utext="${answers.get(1)}"></td>
+        </tr>
+        </tbody>
+    </table>
+
 </div>
 
 </body>

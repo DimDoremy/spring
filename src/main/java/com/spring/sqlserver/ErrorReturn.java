@@ -6,20 +6,17 @@ package com.spring.sqlserver;
  * 其他：
  */
 
-public class ErrorReturn {
-    public static void errorInputMismatched() {
+class ErrorReturn {
+    static int err = 0;
+
+    static void errorInputMismatched() {
         // TODO: 2019/12/4 输入SQL和输入自然语言不匹配
+        System.out.println("输入SQL和输入自然语言不匹配");
+        err++;
     }
 
-    public static void errorNoAttributeFoundInSheet() {
-        // TODO: 2019/12/4 输入属性在输入表中不存在
-    }
-
-    public static void errorNoSheetFoundInDataBase() {
-        // TODO: 2019/12/4 输入表在数据库中找不到
-    }
-
-    public static void errorFailToSearchInDataBase() {
+    static void errorFailToSearchInDataBase() {
         // TODO: 2019/12/4 输入SQL语句不符合SQL语法
+        System.out.println("输入SQL语句不符合SQL语法");
     }
 }

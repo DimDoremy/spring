@@ -25,7 +25,6 @@ public class NotePad {
                         break;
                     }
                     if (j == fromList.size()) {
-                        ErrorReturn.errorNoAttributeFoundInSheet();
                         return;
                     }
                 }
@@ -38,7 +37,6 @@ public class NotePad {
                                 break;
                             }
                             if (k == fromList.size()) {
-                                ErrorReturn.errorNoSheetFoundInDataBase();
                                 return;
                             }
                         }

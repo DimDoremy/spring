@@ -55,9 +55,9 @@ public class SqlConnection {
         String dbURL = "jdbc:sqlserver://" + dburl + ";DatabaseName=" + dbname;
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            System.out.println("加载JDBC驱动成功！");
+            //System.out.println("加载JDBC驱动成功！");
             dbConn = DriverManager.getConnection(dbURL, user, pass);
-            System.out.println("数据库连接成功！");
+            //System.out.println("数据库连接成功！");
         } catch (Exception e) {
             e.printStackTrace();
         }

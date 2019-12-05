@@ -36,6 +36,12 @@ public class MainFunction {
             SC.haveKeyWord(strSQL);
             SC.addList();
             WL.cutIntoWords(SC.markedWords, strNaturalWords);
+            if (ErrorReturn.err == 1) {
+                answer_me_natural_word.add("输入语句无法得到查询结果！");
+                answer_me_SQL_word.add("请输入匹配的查询语句！");
+                ErrorReturn.err--;
+                return;
+            }
             NP.addNotes(SC.markedWords, SC.whereKeyWord1, SC.fromList, SQL);
             WR.mainWordRebuildAll(SC, WL, NP);
             answer_me_natural_word = WR.answer_me_natural_word;
